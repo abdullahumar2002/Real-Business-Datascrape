@@ -49,6 +49,10 @@ logs/
 *.swo
 *~
 
+# Devin
+.devin
+.devin/
+
 # OS
 .DS_Store
 Thumbs.db
