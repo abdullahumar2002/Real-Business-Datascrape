@@ -1,0 +1,76 @@
+# Business Lead Agent Configuration
+
+# Target Settings
+targets:
+  total: 500
+  uae: 250
+  usa: 250
+
+# Rate Limiting
+rate_limiting:
+  delay_min: 2
+  delay_max: 5
+  timeout: 30
+  max_retries: 3
+
+# Database
+database:
+  path: data/business.db
+
+# Logging
+logging:
+  level: INFO
+  file: logs/agent.log
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+# Output
+output:
+  directory: output
+  csv_filename: verified_businesses.csv
+  excel_filename: verified_businesses.xlsx
+  json_filename: verified_businesses.json
+  pdf_filename: verified_businesses.pdf
+  report_filename: verification_report.json
+
+# AI Configuration (optional)
+ai:
+  provider: openai
+  model: gpt-3.5-turbo
+  temperature: 0.3
+  max_tokens: 500
+
+# Lead Scoring
+lead_scoring:
+  no_website: 20
+  outdated_website: 15
+  unreachable_website: 15
+  weak_online_presence: 10
+  has_public_email: 10
+  has_public_phone: 10
+  established_local: 10
+  many_reviews: 5
+  high_value_category: 5
+
+# High-value categories
+high_value_categories:
+  - Restaurants
+  - Hotels
+  - Real estate
+  - Construction
+  - Interior design
+  - Law firms
+  - Accounting
+  - Clinics
+  - Dental
+  - Logistics
+  - Automotive
+  - Manufacturing
+  - Retail
+  - Education
+  - Consulting
+  - Professional services
+  - Beauty
+  - Fitness
+  - Travel
+  - Cleaning
+  - Home services

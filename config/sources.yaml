@@ -1,0 +1,44 @@
+# Business Data Sources Configuration
+# IMPORTANT: Only configure sources that permit automated data collection
+# If a source prohibits automation, set allowed: false and add notes
+
+sources:
+  # Example sources - these are placeholders showing the format
+  # Replace with actual permitted sources or use CSV import
+
+  - name: "Example UAE Directory"
+    country: "UAE"
+    url: "https://example-uae-directory.com"
+    source_type: "directory"
+    allowed: false
+    priority: 1
+    parser: "generic"
+    notes: "Placeholder - replace with actual permitted source"
+    automation_allowed: false
+    requires_manual_export: false
+
+  - name: "Example USA Directory"
+    country: "USA"
+    url: "https://example-usa-directory.com"
+    source_type: "directory"
+    allowed: false
+    priority: 1
+    parser: "generic"
+    notes: "Placeholder - replace with actual permitted source"
+    automation_allowed: false
+    requires_manual_export: false
+
+  # Official APIs (preferred when available)
+  - name: "Example Official API"
+    country: "UAE"
+    url: "https://api.example.com"
+    source_type: "api"
+    allowed: false
+    priority: 2
+    parser: "api"
+    notes: "Placeholder - replace with actual API endpoint"
+    automation_allowed: false
+    requires_api_key: false
+
+# CSV Import is always available for authorized/user-provided data
+# Use: python agent.py --import-csv data/raw/businesses.csv
